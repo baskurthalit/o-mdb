@@ -56,6 +56,9 @@
 		1B334D322A69A413007D7BA8 /* OMDB */ = {
 			isa = PBXGroup;
 			children = (
+				1B334D4B2A69A6B7007D7BA8 /* Layers */,
+				1B334D4C2A69A6C6007D7BA8 /* Utilities */,
+				1B334D4A2A69A6A8007D7BA8 /* Coordinators */,
 				1B334D332A69A413007D7BA8 /* AppDelegate.swift */,
 				1B334D352A69A413007D7BA8 /* SceneDelegate.swift */,
 				1B334D372A69A413007D7BA8 /* ViewController.swift */,
@@ -65,6 +68,83 @@
 				1B334D412A69A413007D7BA8 /* Info.plist */,
 			);
 			path = OMDB;
+			sourceTree = "<group>";
+		};
+		1B334D4A2A69A6A8007D7BA8 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		1B334D4B2A69A6B7007D7BA8 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				1B334D4D2A69A6D9007D7BA8 /* Builder */,
+				1B334D4F2A69A6FA007D7BA8 /* Data */,
+				1B334D502A69A702007D7BA8 /* Domain */,
+				1B334D4E2A69A6EF007D7BA8 /* Presentation */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		1B334D4C2A69A6C6007D7BA8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1B334D532A69A749007D7BA8 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1B334D4D2A69A6D9007D7BA8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		1B334D4E2A69A6EF007D7BA8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1B334D4F2A69A6FA007D7BA8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1B334D502A69A702007D7BA8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1B334D522A69A725007D7BA8 /* UseCase */,
+				1B334D512A69A71E007D7BA8 /* DataStore */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1B334D512A69A71E007D7BA8 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		1B334D522A69A725007D7BA8 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		1B334D532A69A749007D7BA8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,9 +369,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8354Y6X4AR;
+				DEVELOPMENT_TEAM = 75269UYTG4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OMDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -306,6 +387,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bseyha.OMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,9 +399,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8354Y6X4AR;
+				DEVELOPMENT_TEAM = 75269UYTG4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OMDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,6 +417,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bseyha.OMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
