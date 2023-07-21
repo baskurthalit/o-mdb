@@ -19,10 +19,12 @@ final class ReachabilityManager: NSObject {
         return reachabilityStatus == .wifi
     }
     
-    var reachabilityStatus: Reachability.Connection = .unavailable
+    private override init() {}
+    
+    private(set) var reachabilityStatus: Reachability.Connection = .unavailable
     let reachability = try! Reachability()
     
-    @objc func reachabilityChanged(notification: Notification) {
+    @objc private func reachabilityChanged(notification: Notification) {
         guard let reachability = notification.object as? Reachability else { return }
         reachabilityStatus = reachability.connection
     }
