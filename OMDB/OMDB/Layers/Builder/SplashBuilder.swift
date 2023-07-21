@@ -14,8 +14,11 @@ protocol SplashScreenBuilder {
 
 struct SplashScreenBuilderImpl: SplashScreenBuilder {
     func build(coordinatorDelegate: CoordinatorDelegate?) -> UIViewController {
-        let vc = SplashVC(nibName: SplashVC.className, bundle: nil)
-        vc.coordinator = coordinatorDelegate
-        return vc
+        let viewController = SplashVC(nibName: SplashVC.className, bundle: nil)
+        viewController.coordinator = coordinatorDelegate
+        let splashUseCase: SplashUseCase = SplashUseCaseImpl()
+        let splashViewModel: any SplashVM = SplashVMImpl(useCase: splashUseCase)
+        viewController.inject(viewModel: splashViewModel)
+        return viewController
     }
 }

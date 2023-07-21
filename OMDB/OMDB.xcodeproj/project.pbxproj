@@ -11,6 +11,9 @@
 		1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B334D352A69A413007D7BA8 /* SceneDelegate.swift */; };
 		1B334D3D2A69A413007D7BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B334D3C2A69A413007D7BA8 /* Assets.xcassets */; };
 		1B334D402A69A413007D7BA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B334D3E2A69A413007D7BA8 /* LaunchScreen.storyboard */; };
+		1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */; };
+		1B7383D42A6B238B00EEBC5F /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */; };
+		1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D52A6B267A00EEBC5F /* VMHelper.swift */; };
 		1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183D82A69ACA5008F08C9 /* Coordinator.swift */; };
 		1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */; };
 		1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */; };
@@ -32,6 +35,9 @@
 		1B334D3C2A69A413007D7BA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B334D3F2A69A413007D7BA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B334D412A69A413007D7BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
+		1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
+		1B7383D52A6B267A00EEBC5F /* VMHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMHelper.swift; sourceTree = "<group>"; };
 		1BB183D82A69ACA5008F08C9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 			children = (
 				1BB183DA2A69ADDE008F08C9 /* Base */,
 				1B334D532A69A749007D7BA8 /* Extensions */,
+				1B7383D52A6B267A00EEBC5F /* VMHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 		1B334D522A69A725007D7BA8 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 			children = (
 				1BB183E52A69BD67008F08C9 /* SplashVC.swift */,
 				1BB183E62A69BD67008F08C9 /* SplashVC.xib */,
+				1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -296,7 +305,10 @@
 				1B334D342A69A413007D7BA8 /* AppDelegate.swift in Sources */,
 				1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */,
 				1BB183F92A6B0806008F08C9 /* ReachabiltyManager.swift in Sources */,
+				1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */,
 				1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */,
+				1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */,
+				1B7383D42A6B238B00EEBC5F /* SplashUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
