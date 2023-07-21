@@ -21,6 +21,8 @@
 		1BB183EB2A69C5E4008F08C9 /* SearchMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183E92A69C5E4008F08C9 /* SearchMovieVC.swift */; };
 		1BB183EC2A69C5E4008F08C9 /* SearchMovieVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB183EA2A69C5E4008F08C9 /* SearchMovieVC.xib */; };
 		1BB183EE2A69C70C008F08C9 /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183ED2A69C70C008F08C9 /* SplashBuilder.swift */; };
+		1BB183F72A6B07E7008F08C9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 1BB183F62A6B07E7008F08C9 /* Reachability */; };
+		1BB183F92A6B0806008F08C9 /* ReachabiltyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183F82A6B0806008F08C9 /* ReachabiltyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		1BB183E92A69C5E4008F08C9 /* SearchMovieVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieVC.swift; sourceTree = "<group>"; };
 		1BB183EA2A69C5E4008F08C9 /* SearchMovieVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMovieVC.xib; sourceTree = "<group>"; };
 		1BB183ED2A69C70C008F08C9 /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		1BB183F82A6B0806008F08C9 /* ReachabiltyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabiltyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB183F72A6B07E7008F08C9 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +104,7 @@
 				1B334D4F2A69A6FA007D7BA8 /* Data */,
 				1B334D502A69A702007D7BA8 /* Domain */,
 				1B334D4E2A69A6EF007D7BA8 /* Presentation */,
+				1BB183F82A6B0806008F08C9 /* ReachabiltyManager.swift */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			);
 			name = OMDB;
 			packageProductDependencies = (
+				1BB183F62A6B07E7008F08C9 /* Reachability */,
 			);
 			productName = OMDB;
 			productReference = 1B334D302A69A413007D7BA8 /* OMDB.app */;
@@ -250,6 +256,7 @@
 			);
 			mainGroup = 1B334D272A69A413007D7BA8;
 			packageReferences = (
+				1BB183F52A6B07E7008F08C9 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 			);
 			productRefGroup = 1B334D312A69A413007D7BA8 /* Products */;
 			projectDirPath = "";
@@ -288,6 +295,7 @@
 				1BB183EE2A69C70C008F08C9 /* SplashBuilder.swift in Sources */,
 				1B334D342A69A413007D7BA8 /* AppDelegate.swift in Sources */,
 				1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */,
+				1BB183F92A6B0806008F08C9 /* ReachabiltyManager.swift in Sources */,
 				1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1BB183F52A6B07E7008F08C9 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1BB183F62A6B07E7008F08C9 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BB183F52A6B07E7008F08C9 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B334D282A69A413007D7BA8 /* Project object */;
 }
