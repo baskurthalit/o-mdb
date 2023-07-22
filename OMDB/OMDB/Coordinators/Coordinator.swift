@@ -9,6 +9,7 @@ import UIKit
 
 enum CoordinatorType : String, CaseIterable {
     case app
+    case movie
 }
 
 protocol Coordinator: AnyObject {

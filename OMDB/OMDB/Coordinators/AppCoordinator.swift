@@ -33,19 +33,10 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator: CoordinatorDelegate {
     func navigate(to flowType: AppFlow) {
         switch flowType{
-        case .movie(let movieFlow):
-            handleMovieFlows(movieFlow)
-        }
-    }
-    
-    private func handleMovieFlows(_ movieFlow: MovieFlow) {
-        
-        switch movieFlow {
-        case .searchMovie:
-            let builder: SearchMovieBuilder = SearchMovieBuilderImpl()
-            let vc = builder.build(coordinatorDelegate: self)
-            self.navigationController.pushViewController(vc, animated: true)
-        case .movieDetail: break
+        case .movie:
+            let movieCoordinator = MovieCoordinator(parentCoordinator: self)
+            self.addChild(coordinator: movieCoordinator)
+            movieCoordinator.start()
         }
     }
 }

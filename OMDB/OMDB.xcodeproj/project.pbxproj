@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0E764E2A6C0967002B61EF /* MovieCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E764D2A6C0967002B61EF /* MovieCoordinator.swift */; };
 		1B334D342A69A413007D7BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B334D332A69A413007D7BA8 /* AppDelegate.swift */; };
 		1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B334D352A69A413007D7BA8 /* SceneDelegate.swift */; };
 		1B334D3D2A69A413007D7BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B334D3C2A69A413007D7BA8 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B0E764D2A6C0967002B61EF /* MovieCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCoordinator.swift; sourceTree = "<group>"; };
 		1B334D302A69A413007D7BA8 /* OMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B334D332A69A413007D7BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B334D352A69A413007D7BA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				1B9E281A2A6BCFE000BC652B /* Router */,
 				1BB183D82A69ACA5008F08C9 /* Coordinator.swift */,
 				1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */,
+				1B0E764D2A6C0967002B61EF /* MovieCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */,
 				1BB183E72A69BD67008F08C9 /* SplashVC.swift in Sources */,
 				1B9E28112A6BC57E00BC652B /* SearchMovie.swift in Sources */,
+				1B0E764E2A6C0967002B61EF /* MovieCoordinator.swift in Sources */,
 				1BB183EB2A69C5E4008F08C9 /* SearchMovieVC.swift in Sources */,
 				1BB183E22A69BB5A008F08C9 /* NSObject+Ext.swift in Sources */,
 				1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */,
@@ -544,11 +548,13 @@
 				DEVELOPMENT_TEAM = 75269UYTG4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OMDB/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OMDB;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,9 +563,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bseyha.OMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -574,11 +583,13 @@
 				DEVELOPMENT_TEAM = 75269UYTG4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OMDB/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OMDB;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,9 +598,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bseyha.OMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

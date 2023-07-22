@@ -8,8 +8,7 @@
 import Foundation
 
 enum AppFlow {
-    case movie(movieFlow: MovieFlow)
-    
+    case movie(_ movieFlow: MovieFlow)
 }
 
 enum MovieFlow {

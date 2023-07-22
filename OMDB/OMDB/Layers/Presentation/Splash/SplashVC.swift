@@ -18,8 +18,13 @@ class SplashVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         viewModel?.start()
-        coordinator?.navigate(to: .movie(movieFlow: .searchMovie))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.coordinator?.navigate(to: .movie(.searchMovie))
+        }
+        
         animationView.play()
     }
     
