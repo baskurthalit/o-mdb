@@ -31,9 +31,8 @@ class AppCoordinator: Coordinator {
 
 extension AppCoordinator: CoordinatorDelegate {
     func navigate() {
-        let vc: SearchMovieVC = .init(nibName: SearchMovieVC.className, bundle: nil)
-        vc.view.backgroundColor = .cyan
-        vc.coordinator = self
+        let builder: SearchMovieBuilder = SearchMovieBuilderImpl()
+        let vc = builder.build(coordinatorDelegate: self)
         self.navigationController.pushViewController(vc, animated: true)
     }
     

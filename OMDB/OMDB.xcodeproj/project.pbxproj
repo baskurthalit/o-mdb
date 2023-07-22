@@ -16,6 +16,10 @@
 		1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D52A6B267A00EEBC5F /* VMHelper.swift */; };
 		1B9E280F2A6BC3C900BC652B /* OMDBApı.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E280E2A6BC3C900BC652B /* OMDBApı.swift */; };
 		1B9E28112A6BC57E00BC652B /* SearchMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28102A6BC57E00BC652B /* SearchMovie.swift */; };
+		1B9E28132A6BCBCF00BC652B /* SearchMovieVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28122A6BCBCF00BC652B /* SearchMovieVM.swift */; };
+		1B9E28152A6BCC4400BC652B /* SearchMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28142A6BCC4400BC652B /* SearchMovieUseCase.swift */; };
+		1B9E28172A6BCC9E00BC652B /* SearchMovieBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28162A6BCC9E00BC652B /* SearchMovieBuilder.swift */; };
+		1B9E28192A6BCD2900BC652B /* SearchMovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28182A6BCD2900BC652B /* SearchMovieProvider.swift */; };
 		1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183D82A69ACA5008F08C9 /* Coordinator.swift */; };
 		1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */; };
 		1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */; };
@@ -42,6 +46,10 @@
 		1B7383D52A6B267A00EEBC5F /* VMHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMHelper.swift; sourceTree = "<group>"; };
 		1B9E280E2A6BC3C900BC652B /* OMDBApı.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OMDBApı.swift"; sourceTree = "<group>"; };
 		1B9E28102A6BC57E00BC652B /* SearchMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovie.swift; sourceTree = "<group>"; };
+		1B9E28122A6BCBCF00BC652B /* SearchMovieVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieVM.swift; sourceTree = "<group>"; };
+		1B9E28142A6BCC4400BC652B /* SearchMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieUseCase.swift; sourceTree = "<group>"; };
+		1B9E28162A6BCC9E00BC652B /* SearchMovieBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieBuilder.swift; sourceTree = "<group>"; };
+		1B9E28182A6BCD2900BC652B /* SearchMovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieProvider.swift; sourceTree = "<group>"; };
 		1BB183D82A69ACA5008F08C9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -133,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				1BB183ED2A69C70C008F08C9 /* SplashBuilder.swift */,
+				1B9E28162A6BCC9E00BC652B /* SearchMovieBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */,
+				1B9E28142A6BCC4400BC652B /* SearchMovieUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 			children = (
 				1BB183E92A69C5E4008F08C9 /* SearchMovieVC.swift */,
 				1BB183EA2A69C5E4008F08C9 /* SearchMovieVC.xib */,
+				1B9E28122A6BCBCF00BC652B /* SearchMovieVM.swift */,
+				1B9E28182A6BCD2900BC652B /* SearchMovieProvider.swift */,
 			);
 			path = SearchMovie;
 			sourceTree = "<group>";
@@ -309,12 +321,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9E28152A6BCC4400BC652B /* SearchMovieUseCase.swift in Sources */,
 				1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */,
 				1BB183E72A69BD67008F08C9 /* SplashVC.swift in Sources */,
 				1B9E28112A6BC57E00BC652B /* SearchMovie.swift in Sources */,
 				1BB183EB2A69C5E4008F08C9 /* SearchMovieVC.swift in Sources */,
 				1BB183E22A69BB5A008F08C9 /* NSObject+Ext.swift in Sources */,
 				1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */,
+				1B9E28172A6BCC9E00BC652B /* SearchMovieBuilder.swift in Sources */,
+				1B9E28132A6BCBCF00BC652B /* SearchMovieVM.swift in Sources */,
 				1BB183E42A69BBB6008F08C9 /* BaseViewController.swift in Sources */,
 				1BB183EE2A69C70C008F08C9 /* SplashBuilder.swift in Sources */,
 				1B334D342A69A413007D7BA8 /* AppDelegate.swift in Sources */,
@@ -323,6 +338,7 @@
 				1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */,
 				1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */,
 				1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */,
+				1B9E28192A6BCD2900BC652B /* SearchMovieProvider.swift in Sources */,
 				1B7383D42A6B238B00EEBC5F /* SplashUseCase.swift in Sources */,
 				1B9E280F2A6BC3C900BC652B /* OMDBApı.swift in Sources */,
 			);
