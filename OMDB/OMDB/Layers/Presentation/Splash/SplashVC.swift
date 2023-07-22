@@ -19,6 +19,7 @@ class SplashVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.start()
+        coordinator?.navigate(to: .movie(movieFlow: .searchMovie))
         animationView.play()
     }
     

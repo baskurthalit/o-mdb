@@ -12,6 +12,7 @@
 		1B334D3D2A69A413007D7BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B334D3C2A69A413007D7BA8 /* Assets.xcassets */; };
 		1B334D402A69A413007D7BA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B334D3E2A69A413007D7BA8 /* LaunchScreen.storyboard */; };
 		1B37AFF22A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37AFF12A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift */; };
+		1B37AFF62A6BF21700C0C3A0 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37AFF52A6BF21700C0C3A0 /* UIApplication+Ext.swift */; };
 		1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */; };
 		1B7383D42A6B238B00EEBC5F /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */; };
 		1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D52A6B267A00EEBC5F /* VMHelper.swift */; };
@@ -51,6 +52,7 @@
 		1B334D3F2A69A413007D7BA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B334D412A69A413007D7BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B37AFF12A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsManager.swift; sourceTree = "<group>"; };
+		1B37AFF52A6BF21700C0C3A0 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
 		1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
 		1B7383D52A6B267A00EEBC5F /* VMHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMHelper.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				1BB183E12A69BB5A008F08C9 /* NSObject+Ext.swift */,
+				1B37AFF52A6BF21700C0C3A0 /* UIApplication+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B37AFF62A6BF21700C0C3A0 /* UIApplication+Ext.swift in Sources */,
 				1B9E28152A6BCC4400BC652B /* SearchMovieUseCase.swift in Sources */,
 				1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */,
 				1BB183E72A69BD67008F08C9 /* SplashVC.swift in Sources */,

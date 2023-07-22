@@ -11,7 +11,7 @@ class AppCoordinator: Coordinator {
     private(set) var coordinatorType: CoordinatorType = .app
     
     var parentCoordinator: Coordinator?
-    
+    var window: UIWindow
     var childCoordinators: [Coordinator] = []
     
     var navigationController: BaseNavigationController
@@ -23,9 +23,10 @@ class AppCoordinator: Coordinator {
     }
     
     init(parentCoordinator: Coordinator? = nil,
-         navigationController: BaseNavigationController) {
+         navigationController: BaseNavigationController, window: UIWindow) {
         self.parentCoordinator = parentCoordinator
         self.navigationController = navigationController
+        self.window = window
     }
 }
 
