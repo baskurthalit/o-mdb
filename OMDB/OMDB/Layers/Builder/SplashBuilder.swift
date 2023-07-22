@@ -17,7 +17,7 @@ struct SplashScreenBuilderImpl: SplashScreenBuilder {
         let viewController = SplashVC(nibName: SplashVC.className, bundle: nil)
         viewController.coordinator = coordinatorDelegate
         let splashUseCase: SplashUseCase = SplashUseCaseImpl()
-        let splashViewModel: any SplashVM = SplashVMImpl(useCase: splashUseCase)
+        let splashViewModel: SplashVM = SplashVMImpl(useCase: splashUseCase)
         viewController.inject(viewModel: splashViewModel)
         return viewController
     }

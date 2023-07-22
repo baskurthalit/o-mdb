@@ -82,6 +82,7 @@
 		1B334D322A69A413007D7BA8 /* OMDB */ = {
 			isa = PBXGroup;
 			children = (
+				1B7383D72A6B292900EEBC5F /* Managers */,
 				1B334D4A2A69A6A8007D7BA8 /* Coordinators */,
 				1B334D4B2A69A6B7007D7BA8 /* Layers */,
 				1B334D4C2A69A6C6007D7BA8 /* Utilities */,
@@ -110,7 +111,6 @@
 				1B334D4F2A69A6FA007D7BA8 /* Data */,
 				1B334D502A69A702007D7BA8 /* Domain */,
 				1B334D4E2A69A6EF007D7BA8 /* Presentation */,
-				1BB183F82A6B0806008F08C9 /* ReachabiltyManager.swift */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -180,6 +180,14 @@
 				1BB183E12A69BB5A008F08C9 /* NSObject+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B7383D72A6B292900EEBC5F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1BB183F82A6B0806008F08C9 /* ReachabiltyManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		1BB183DA2A69ADDE008F08C9 /* Base */ = {
