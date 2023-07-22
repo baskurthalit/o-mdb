@@ -16,6 +16,7 @@
 		1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */; };
 		1B7383D42A6B238B00EEBC5F /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */; };
 		1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D52A6B267A00EEBC5F /* VMHelper.swift */; };
+		1B8DA8612A6BFDFF0068CC44 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8DA8602A6BFDFF0068CC44 /* Reachability */; };
 		1B9E280F2A6BC3C900BC652B /* OMDBApı.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E280E2A6BC3C900BC652B /* OMDBApı.swift */; };
 		1B9E28112A6BC57E00BC652B /* SearchMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28102A6BC57E00BC652B /* SearchMovie.swift */; };
 		1B9E28132A6BCBCF00BC652B /* SearchMovieVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28122A6BCBCF00BC652B /* SearchMovieVM.swift */; };
@@ -40,7 +41,6 @@
 		1BB183EB2A69C5E4008F08C9 /* SearchMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183E92A69C5E4008F08C9 /* SearchMovieVC.swift */; };
 		1BB183EC2A69C5E4008F08C9 /* SearchMovieVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB183EA2A69C5E4008F08C9 /* SearchMovieVC.xib */; };
 		1BB183EE2A69C70C008F08C9 /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183ED2A69C70C008F08C9 /* SplashBuilder.swift */; };
-		1BB183F72A6B07E7008F08C9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 1BB183F62A6B07E7008F08C9 /* Reachability */; };
 		1BB183F92A6B0806008F08C9 /* ReachabiltyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183F82A6B0806008F08C9 /* ReachabiltyManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B9E282A2A6BDED800BC652B /* FirebaseAnalyticsSwift in Frameworks */,
-				1BB183F72A6B07E7008F08C9 /* Reachability in Frameworks */,
+				1B8DA8612A6BFDFF0068CC44 /* Reachability in Frameworks */,
 				1B9E281F2A6BD4CF00BC652B /* Lottie in Frameworks */,
 				1B9E282E2A6BDED800BC652B /* FirebaseRemoteConfigSwift in Frameworks */,
 				1B9E28282A6BDED800BC652B /* FirebaseAnalytics in Frameworks */,
@@ -309,12 +309,12 @@
 			);
 			name = OMDB;
 			packageProductDependencies = (
-				1BB183F62A6B07E7008F08C9 /* Reachability */,
 				1B9E281E2A6BD4CF00BC652B /* Lottie */,
 				1B9E28272A6BDED800BC652B /* FirebaseAnalytics */,
 				1B9E28292A6BDED800BC652B /* FirebaseAnalyticsSwift */,
 				1B9E282B2A6BDED800BC652B /* FirebaseRemoteConfig */,
 				1B9E282D2A6BDED800BC652B /* FirebaseRemoteConfigSwift */,
+				1B8DA8602A6BFDFF0068CC44 /* Reachability */,
 			);
 			productName = OMDB;
 			productReference = 1B334D302A69A413007D7BA8 /* OMDB.app */;
@@ -345,9 +345,9 @@
 			);
 			mainGroup = 1B334D272A69A413007D7BA8;
 			packageReferences = (
-				1BB183F52A6B07E7008F08C9 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 				1B9E281D2A6BD4CF00BC652B /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				1B9E28262A6BDED800BC652B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1B8DA85F2A6BFDFF0068CC44 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 			);
 			productRefGroup = 1B334D312A69A413007D7BA8 /* Products */;
 			projectDirPath = "";
@@ -617,6 +617,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1B8DA85F2A6BFDFF0068CC44 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.0;
+			};
+		};
 		1B9E281D2A6BD4CF00BC652B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -633,17 +641,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
-		1BB183F52A6B07E7008F08C9 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B8DA8602A6BFDFF0068CC44 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B8DA85F2A6BFDFF0068CC44 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			productName = Reachability;
+		};
 		1B9E281E2A6BD4CF00BC652B /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1B9E281D2A6BD4CF00BC652B /* XCRemoteSwiftPackageReference "lottie-ios" */;
@@ -668,11 +673,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1B9E28262A6BDED800BC652B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfigSwift;
-		};
-		1BB183F62A6B07E7008F08C9 /* Reachability */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1BB183F52A6B07E7008F08C9 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
-			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

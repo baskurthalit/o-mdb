@@ -27,7 +27,7 @@ final class ReachabilityManager: NSObject {
     @objc private func reachabilityChanged(notification: Notification) {
         guard let reachability = notification.object as? Reachability else { return }
         reachabilityStatus = reachability.connection
-//        sendNotificationReachabiltyChanged()
+        sendNotificationReachabiltyChanged()
     }
     
     private func sendNotificationReachabiltyChanged() {
