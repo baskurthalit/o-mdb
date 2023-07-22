@@ -13,9 +13,7 @@ class SplashVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         viewModel?.start()
-        
     }
     
     func inject(viewModel: SplashVM) {

@@ -39,5 +39,12 @@ extension AppCoordinator: CoordinatorDelegate {
     
     private func handleMovieFlows(_ movieFlow: MovieFlow) {
         
+        switch movieFlow {
+        case .searchMovie:
+            let builder: SearchMovieBuilder = SearchMovieBuilderImpl()
+            let vc = builder.build(coordinatorDelegate: self)
+            self.navigationController.pushViewController(vc, animated: true)
+        case .movieDetail: break
+        }
     }
 }
