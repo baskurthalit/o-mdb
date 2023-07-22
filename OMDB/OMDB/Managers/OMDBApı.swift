@@ -17,6 +17,8 @@ struct OMDBAPI {
         case queryEncodingFailed
     }
     
+    private init() { }
+    
     private static let baseURL = "https://www.omdbapi.com"
     private static let apiKey = "f8048348"
     
