@@ -6,14 +6,20 @@
 //
 
 import UIKit
+import Lottie
 
 class SplashVC: BaseViewController {
     
     private var viewModel: SplashVM!
 
+    @IBOutlet weak var animationView: LottieAnimationView! {
+        didSet { animationView.loopMode = .loop }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.start()
+        animationView.play()
     }
     
     func inject(viewModel: SplashVM) {

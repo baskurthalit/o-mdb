@@ -22,6 +22,7 @@
 		1B9E28192A6BCD2900BC652B /* SearchMovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28182A6BCD2900BC652B /* SearchMovieProvider.swift */; };
 		1B9E281C2A6BCFED00BC652B /* RouterFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E281B2A6BCFED00BC652B /* RouterFlow.swift */; };
 		1B9E281F2A6BD4CF00BC652B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1B9E281E2A6BD4CF00BC652B /* Lottie */; };
+		1B9E28232A6BD61600BC652B /* splash-movie-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B9E28222A6BD61600BC652B /* splash-movie-animation.json */; };
 		1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183D82A69ACA5008F08C9 /* Coordinator.swift */; };
 		1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */; };
 		1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */; };
@@ -53,6 +54,7 @@
 		1B9E28162A6BCC9E00BC652B /* SearchMovieBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieBuilder.swift; sourceTree = "<group>"; };
 		1B9E28182A6BCD2900BC652B /* SearchMovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieProvider.swift; sourceTree = "<group>"; };
 		1B9E281B2A6BCFED00BC652B /* RouterFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFlow.swift; sourceTree = "<group>"; };
+		1B9E28222A6BD61600BC652B /* splash-movie-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "splash-movie-animation.json"; sourceTree = "<group>"; };
 		1BB183D82A69ACA5008F08C9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		1B334D322A69A413007D7BA8 /* OMDB */ = {
 			isa = PBXGroup;
 			children = (
+				1B9E28202A6BD56100BC652B /* Animation */,
 				1B7383D72A6B292900EEBC5F /* Managers */,
 				1B334D4A2A69A6A8007D7BA8 /* Coordinators */,
 				1B334D4B2A69A6B7007D7BA8 /* Layers */,
@@ -219,6 +222,22 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		1B9E28202A6BD56100BC652B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E28212A6BD56B00BC652B /* Splash */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		1B9E28212A6BD56B00BC652B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E28222A6BD61600BC652B /* splash-movie-animation.json */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		1BB183DA2A69ADDE008F08C9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B334D402A69A413007D7BA8 /* LaunchScreen.storyboard in Resources */,
+				1B9E28232A6BD61600BC652B /* splash-movie-animation.json in Resources */,
 				1BB183EC2A69C5E4008F08C9 /* SearchMovieVC.xib in Resources */,
 				1BB183E82A69BD67008F08C9 /* SplashVC.xib in Resources */,
 				1B334D3D2A69A413007D7BA8 /* Assets.xcassets in Resources */,
