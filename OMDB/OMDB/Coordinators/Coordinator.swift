@@ -33,5 +33,5 @@ extension Coordinator {
 }
 
 protocol CoordinatorDelegate: AnyObject {
-    func navigate()
+    func navigate(to flowType: AppFlow)
 }

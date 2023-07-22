@@ -13,7 +13,6 @@ class SplashVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.coordinator?.navigate()
 
         viewModel?.start()
         

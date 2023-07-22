@@ -14,6 +14,7 @@
 		1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */; };
 		1B7383D42A6B238B00EEBC5F /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */; };
 		1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D52A6B267A00EEBC5F /* VMHelper.swift */; };
+		1B9E281C2A6BCFED00BC652B /* RouterFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E281B2A6BCFED00BC652B /* RouterFlow.swift */; };
 		1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183D82A69ACA5008F08C9 /* Coordinator.swift */; };
 		1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */; };
 		1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */; };
@@ -38,6 +39,7 @@
 		1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
 		1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
 		1B7383D52A6B267A00EEBC5F /* VMHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMHelper.swift; sourceTree = "<group>"; };
+		1B9E281B2A6BCFED00BC652B /* RouterFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFlow.swift; sourceTree = "<group>"; };
 		1BB183D82A69ACA5008F08C9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		1B334D4A2A69A6A8007D7BA8 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				1B9E281A2A6BCFE000BC652B /* Router */,
 				1BB183D82A69ACA5008F08C9 /* Coordinator.swift */,
 				1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */,
 			);
@@ -188,6 +191,14 @@
 				1BB183F82A6B0806008F08C9 /* ReachabiltyManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		1B9E281A2A6BCFE000BC652B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E281B2A6BCFED00BC652B /* RouterFlow.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		1BB183DA2A69ADDE008F08C9 /* Base */ = {
@@ -311,6 +322,7 @@
 				1BB183E42A69BBB6008F08C9 /* BaseViewController.swift in Sources */,
 				1BB183EE2A69C70C008F08C9 /* SplashBuilder.swift in Sources */,
 				1B334D342A69A413007D7BA8 /* AppDelegate.swift in Sources */,
+				1B9E281C2A6BCFED00BC652B /* RouterFlow.swift in Sources */,
 				1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */,
 				1BB183F92A6B0806008F08C9 /* ReachabiltyManager.swift in Sources */,
 				1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */,

@@ -30,11 +30,14 @@ class AppCoordinator: Coordinator {
 }
 
 extension AppCoordinator: CoordinatorDelegate {
-    func navigate() {
-        let vc: SearchMovieVC = .init(nibName: SearchMovieVC.className, bundle: nil)
-        vc.view.backgroundColor = .cyan
-        vc.coordinator = self
-        self.navigationController.pushViewController(vc, animated: true)
+    func navigate(to flowType: AppFlow) {
+        switch flowType{
+        case .movie(let movieFlow):
+            handleMovieFlows(movieFlow)
+        }
     }
     
+    private func handleMovieFlows(_ movieFlow: MovieFlow) {
+        
+    }
 }
