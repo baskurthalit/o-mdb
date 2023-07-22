@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         ReachabilityManager.shared.startMonitoring()
+        FirebaseApp.configure()
+        
+        FirebaseAnalyticsManager.shared.start(settings: .init())
         return true
     }
 
