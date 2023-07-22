@@ -14,6 +14,8 @@
 		1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */; };
 		1B7383D42A6B238B00EEBC5F /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */; };
 		1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7383D52A6B267A00EEBC5F /* VMHelper.swift */; };
+		1B9E280F2A6BC3C900BC652B /* OMDBApı.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E280E2A6BC3C900BC652B /* OMDBApı.swift */; };
+		1B9E28112A6BC57E00BC652B /* SearchMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E28102A6BC57E00BC652B /* SearchMovie.swift */; };
 		1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183D82A69ACA5008F08C9 /* Coordinator.swift */; };
 		1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */; };
 		1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */; };
@@ -38,6 +40,8 @@
 		1B7383D12A6B1FC800EEBC5F /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
 		1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
 		1B7383D52A6B267A00EEBC5F /* VMHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMHelper.swift; sourceTree = "<group>"; };
+		1B9E280E2A6BC3C900BC652B /* OMDBApı.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OMDBApı.swift"; sourceTree = "<group>"; };
+		1B9E28102A6BC57E00BC652B /* SearchMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovie.swift; sourceTree = "<group>"; };
 		1BB183D82A69ACA5008F08C9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1BB183DB2A69ADEC008F08C9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		1BB183DD2A69AF02008F08C9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		1B334D4F2A69A6FA007D7BA8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1B9E28102A6BC57E00BC652B /* SearchMovie.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				1BB183F82A6B0806008F08C9 /* ReachabiltyManager.swift */,
+				1B9E280E2A6BC3C900BC652B /* OMDBApı.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			files = (
 				1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */,
 				1BB183E72A69BD67008F08C9 /* SplashVC.swift in Sources */,
+				1B9E28112A6BC57E00BC652B /* SearchMovie.swift in Sources */,
 				1BB183EB2A69C5E4008F08C9 /* SearchMovieVC.swift in Sources */,
 				1BB183E22A69BB5A008F08C9 /* NSObject+Ext.swift in Sources */,
 				1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */,
@@ -317,6 +324,7 @@
 				1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */,
 				1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */,
 				1B7383D42A6B238B00EEBC5F /* SplashUseCase.swift in Sources */,
+				1B9E280F2A6BC3C900BC652B /* OMDBApı.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
