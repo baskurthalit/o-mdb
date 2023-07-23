@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashVC" customModule="OMDB" customModuleProvider="target">
             <connections>
                 <outlet property="animationView" destination="p9h-VP-qD4" id="Beo-9T-2sD"/>
+                <outlet property="splashTitle" destination="4be-pO-yay" id="nLF-my-QXH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,13 +30,23 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="splash-movie-animation"/>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4be-pO-yay">
+                    <rect key="frame" x="20" y="273.66666666666669" width="353" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" red="0.1019607931" green="0.039215687659999998" blue="0.270588249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="4be-pO-yay" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="20Q-Yi-KSd"/>
                 <constraint firstItem="p9h-VP-qD4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ee8-YT-vLv"/>
+                <constraint firstItem="4be-pO-yay" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JNZ-au-umU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4be-pO-yay" secondAttribute="trailing" constant="20" id="Ujp-aH-1wL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p9h-VP-qD4" secondAttribute="trailing" constant="20" id="nU5-5p-Jmt"/>
                 <constraint firstItem="p9h-VP-qD4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="r9h-xv-5eL"/>
+                <constraint firstItem="p9h-VP-qD4" firstAttribute="top" secondItem="4be-pO-yay" secondAttribute="bottom" constant="15" id="uFr-Wr-miR"/>
                 <constraint firstItem="p9h-VP-qD4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zE0-7M-Acv"/>
             </constraints>
             <point key="canvasLocation" x="81.679389312977094" y="20.422535211267608"/>

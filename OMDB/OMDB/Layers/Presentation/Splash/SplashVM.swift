@@ -8,14 +8,14 @@
 import Foundation
 
 protocol SplashVM {
-    var vmStateClosure:( (ObservationType<SplashVMImpl.Event, SplashVMImpl.ErrorType>) -> () )? { get set }
+    var stateClosure:( (ObservationType<SplashVMImpl.Event, SplashVMImpl.ErrorType>) -> () )? { get set }
     
     func start()
 }
 
 final class SplashVMImpl: SplashVM {
     
-    var vmStateClosure: ((ObservationType<SplashEvent, ErrorType>) -> ())?
+    var stateClosure: ((ObservationType<SplashEvent, ErrorType>) -> ())?
     
     typealias Event = SplashEvent
     typealias ErrorType = Error
@@ -26,10 +26,44 @@ final class SplashVMImpl: SplashVM {
         self.useCase = useCase
     }
     
-    func start() { }
+    deinit {
+        print("DEINIT \(self)")
+        NotificationCenter.default.removeObserver(self)
+    }
     
+    func start() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(reachabilityStatus(_:)),
+                                               name: Notification.Name("internetConnectionChanged"), object: nil)
+    }
+    
+    private func checkNetworkStatus(isNetworkAvailable: Bool) {
+        let isNetworkAvailable: Bool = useCase.isNetworkAvailable
+        guard isNetworkAvailable == true else { return }
+        
+        useCase.fetchSplashTitleFromRemoteConfig { [weak self] result in
+            switch result {
+            case .success(let splashTitle):
+                self?.stateClosure?(.updateUI(.updateSplashTitle(title: splashTitle)))
+            case .failure(let error): break
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            self?.stateClosure?(.updateUI(.shouldContinueMainScreen))
+        }
+    }
     
     enum SplashEvent {
-        case updateUI
+        case updateSplashTitle(title: String?)
+        case shouldContinueMainScreen
     }
+    
+    @objc func reachabilityStatus(_ notification: NSNotification) {
+        if let object = notification.object as? [String : Any],
+           let isNetworkAvailable : Bool = object["isNetworkAvailable"] as? Bool {
+            checkNetworkStatus(isNetworkAvailable: isNetworkAvailable)
+        }
+    }
+
 }

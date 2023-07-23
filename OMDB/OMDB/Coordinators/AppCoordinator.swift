@@ -36,6 +36,7 @@ extension AppCoordinator: CoordinatorDelegate {
         case .movie:
             let movieCoordinator = MovieCoordinator(parentCoordinator: self)
             self.addChild(coordinator: movieCoordinator)
+            navigationController.viewControllers.removeAll()
             movieCoordinator.start()
         }
     }

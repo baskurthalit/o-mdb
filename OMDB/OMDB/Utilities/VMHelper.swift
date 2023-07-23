@@ -8,5 +8,5 @@
 import Foundation
 
 enum ObservationType<T, E> where E: Error {
-    case updateUI(data: T? = nil), error(error: E?)
+    case updateUI(_ data: T? = nil), error(error: E?)
 }
