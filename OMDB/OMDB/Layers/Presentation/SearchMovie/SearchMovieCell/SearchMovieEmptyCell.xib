@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="400" id="KGk-i7-Jjw" customClass="SearchMovieEmptyCell" customModule="OMDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nIv-3s-maa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SK4-h8-Rju">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aradık aradık ama hiç bir şey bulamadık." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLR-Vv-R1C">
+                                        <rect key="frame" x="20" y="10" width="280" height="80"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vLR-Vv-R1C" secondAttribute="trailing" constant="20" id="0Ax-pn-9UR"/>
+                                    <constraint firstAttribute="height" constant="100" id="Aks-XQ-oxJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="vLR-Vv-R1C" secondAttribute="bottom" constant="10" id="S8m-NP-1AQ"/>
+                                    <constraint firstItem="vLR-Vv-R1C" firstAttribute="centerY" secondItem="SK4-h8-Rju" secondAttribute="centerY" id="dYQ-Qi-Uli"/>
+                                    <constraint firstItem="vLR-Vv-R1C" firstAttribute="leading" secondItem="SK4-h8-Rju" secondAttribute="leading" constant="20" id="gFb-it-KaT"/>
+                                    <constraint firstItem="vLR-Vv-R1C" firstAttribute="top" secondItem="SK4-h8-Rju" secondAttribute="top" constant="10" id="tOE-r6-xvz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfZ-De-vjb" userLabel="LottieAnimation">
+                                <rect key="frame" x="0.0" y="100" width="320" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4q-6T-zMB" customClass="LottieAnimationView" customModule="Lottie">
+                                        <rect key="frame" x="20" y="10" width="280" height="270"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="searchMovieEmptyAnimation"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="c4q-6T-zMB" firstAttribute="leading" secondItem="sfZ-De-vjb" secondAttribute="leading" constant="20" id="2sL-OX-RyF"/>
+                                    <constraint firstItem="c4q-6T-zMB" firstAttribute="top" secondItem="sfZ-De-vjb" secondAttribute="top" constant="10" id="40Q-wG-rsp"/>
+                                    <constraint firstAttribute="trailing" secondItem="c4q-6T-zMB" secondAttribute="trailing" constant="20" id="ggn-Bv-vWo"/>
+                                    <constraint firstAttribute="bottom" secondItem="c4q-6T-zMB" secondAttribute="bottom" constant="20" id="i6w-Qp-HU2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nIv-3s-maa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DkF-XA-604"/>
+                    <constraint firstAttribute="bottom" secondItem="nIv-3s-maa" secondAttribute="bottom" id="JX9-6e-IYG"/>
+                    <constraint firstAttribute="trailing" secondItem="nIv-3s-maa" secondAttribute="trailing" id="KQa-8W-YbH"/>
+                    <constraint firstItem="nIv-3s-maa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Put-wp-RU8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="animationView" destination="c4q-6T-zMB" id="Nwd-YF-YMO"/>
+                <outlet property="emptyInfoText" destination="vLR-Vv-R1C" id="kRR-Uv-pd1"/>
+                <outlet property="emptyInfoView" destination="SK4-h8-Rju" id="rhI-zg-J2b"/>
+            </connections>
+            <point key="canvasLocation" x="-15.267175572519083" y="31.338028169014088"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

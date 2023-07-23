@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMovieVC" customModule="OMDB" customModuleProvider="target">
             <connections>
+                <outlet property="searchTextField" destination="Hus-qx-C6Z" id="hqj-PQ-pui"/>
+                <outlet property="tableView" destination="bPr-H5-806" id="Sbu-a3-EG4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +20,48 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4V5-VI-6hR">
+                    <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="filmlerde ara.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hus-qx-C6Z">
+                            <rect key="frame" x="30" y="5" width="333" height="40"/>
+                            <color key="backgroundColor" red="0.96078431610000004" green="0.96862745289999996" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96078431610000004" green="0.96862745289999996" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1Kd-1k-ugd"/>
+                        <constraint firstItem="Hus-qx-C6Z" firstAttribute="leading" secondItem="4V5-VI-6hR" secondAttribute="leading" constant="30" id="O4d-Qc-dz7"/>
+                        <constraint firstAttribute="trailing" secondItem="Hus-qx-C6Z" secondAttribute="trailing" constant="30" id="eV5-XE-1Xb"/>
+                        <constraint firstAttribute="bottom" secondItem="Hus-qx-C6Z" secondAttribute="bottom" constant="5" id="fPG-wg-XU6"/>
+                        <constraint firstItem="Hus-qx-C6Z" firstAttribute="top" secondItem="4V5-VI-6hR" secondAttribute="top" constant="5" id="fc5-AJ-v3k"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bPr-H5-806">
+                    <rect key="frame" x="0.0" y="109" width="393" height="743"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemCyanColor"/>
-            <point key="canvasLocation" x="131" y="-12"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4V5-VI-6hR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8IV-2k-Tgp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4V5-VI-6hR" secondAttribute="trailing" id="CPP-49-sAo"/>
+                <constraint firstItem="4V5-VI-6hR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KSM-Lc-gKj"/>
+                <constraint firstItem="bPr-H5-806" firstAttribute="top" secondItem="4V5-VI-6hR" secondAttribute="bottom" id="WOw-DL-P8q"/>
+                <constraint firstItem="bPr-H5-806" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bNo-kl-CQo"/>
+                <constraint firstAttribute="bottom" secondItem="bPr-H5-806" secondAttribute="bottom" id="jYo-ge-Efe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bPr-H5-806" secondAttribute="trailing" id="q9T-Af-bdy"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-12.67605633802817"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

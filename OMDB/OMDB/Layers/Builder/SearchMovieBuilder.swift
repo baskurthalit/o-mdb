@@ -18,7 +18,8 @@ struct SearchMovieBuilderImpl: SearchMovieBuilder {
         viewController.coordinator = coordinatorDelegate
         let searchMovieUseCase: SearchMovieUseCase = SearchMovieUseCaseImpl()
         let searchMovieViewModel: SearchMovieVM = SearchMovieVMImpl(useCase: searchMovieUseCase)
-        viewController.inject(viewModel: searchMovieViewModel)
+        let searchMovieProvider: SearchMovieProvider = SearchMovieProviderImpl()
+        viewController.inject(viewModel: searchMovieViewModel,provider: searchMovieProvider)
         return viewController
     }
 }
