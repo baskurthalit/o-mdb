@@ -16,7 +16,7 @@ class AppCoordinator: Coordinator {
     
     var navigationController: BaseNavigationController
     
-    func start() {
+    func start(completion: @escaping () -> Void = { }) {
         let builder: SplashScreenBuilder = SplashScreenBuilderImpl()
         let vc = builder.build(coordinatorDelegate: self)
         self.navigationController.pushViewController(vc, animated: false)
@@ -36,8 +36,7 @@ extension AppCoordinator: CoordinatorDelegate {
         case .movie:
             let movieCoordinator = MovieCoordinator(parentCoordinator: self)
             self.addChild(coordinator: movieCoordinator)
-            navigationController.viewControllers.removeAll()
-            movieCoordinator.start()
+            movieCoordinator.start() { self.navigationController.viewControllers.removeAll() }
         }
     }
 }

@@ -17,16 +17,13 @@ class SearchMovieVC: BaseViewController {
     }
     private var searchText: String = ""
     @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle("Search Movie")
         addViewModelObservation()
         provider.setupTableView(tableView)
         viewModel.start()
-//        self.startLoading()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-            self.stopLoading()
-        }
     }
     
     func inject(viewModel: SearchMovieVM, provider: SearchMovieProvider) {
@@ -46,6 +43,8 @@ class SearchMovieVC: BaseViewController {
         switch state {
         case .setProviderData(let data):
             provider.setProviderData(contentData: data)
+        case .updateLoading(let isLoadingActive):
+            isLoadingActive ? startLoading() : stopLoading()
         default: break
         }
     }

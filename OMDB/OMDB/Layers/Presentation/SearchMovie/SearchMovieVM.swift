@@ -40,6 +40,7 @@ final class SearchMovieVMImpl: SearchMovieVM {
             }
         } else { sections.append(.movie(rows: movieRows)) }
         stateClosure?(.updateUI(.setProviderData(data: sections)))
+        stateClosure?(.updateUI(.updateLoading(isLoadingActive: false)))
     }
     
     private func appenMovieRows(with searchResult: SearchMovie) {
@@ -50,6 +51,7 @@ final class SearchMovieVMImpl: SearchMovieVM {
     func searchMovie(for query:String) {
         movieRows.removeAll()
         isSearchedBefore = true
+        stateClosure?(.updateUI(.updateLoading(isLoadingActive: true)))
         useCase.searchMovie(query: query) { [weak self] result in
             switch result {
             case .success(let searchMovie):
@@ -67,5 +69,6 @@ final class SearchMovieVMImpl: SearchMovieVM {
     
     enum Event {
         case setProviderData(data: [SearchMovieProviderImpl.SectionType])
+        case updateLoading(isLoadingActive: Bool)
     }
 }

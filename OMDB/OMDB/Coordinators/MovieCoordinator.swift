@@ -22,12 +22,12 @@ class MovieCoordinator: Coordinator, CoordinatorDelegate {
         self.parentCoordinator = parentCoordinator
     }
     
-    func start() {
+    func start(completion: @escaping () -> Void = {}) {
         self.navigationController.modalPresentationStyle = .fullScreen
         let builder: SearchMovieBuilder = SearchMovieBuilderImpl()
         let vc = builder.build(coordinatorDelegate: self)
-        parentCoordinator?.navigationController.present(navigationController, animated: false)
-        self.navigationController.pushViewController(vc, animated: true)
+        parentCoordinator?.navigationController.present(navigationController, animated: false,completion: completion)
+        self.navigationController.pushViewController(vc, animated: false)
     }
 }
 

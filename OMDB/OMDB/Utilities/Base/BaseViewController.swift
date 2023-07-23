@@ -44,12 +44,12 @@ class BaseViewController: UIViewController {
     }
     
     func stopLoading() {
-        removeLoadingAnimation()
+        DispatchQueue.main.async { self.removeLoadingAnimation() }
     }
     
     private func removeLoadingAnimation() {
-        loadingAnimation?.removeFromSuperview()
-        loadingAnimation = nil
+        self.loadingAnimation?.removeFromSuperview()
+        self.loadingAnimation = nil
     }
     
 }

@@ -20,7 +20,7 @@ protocol Coordinator: AnyObject {
     func removeChild(coordinator: Coordinator)
     func addChild(coordinator: Coordinator)
     
-    func start()
+    func start(completion: @escaping () -> Void)
 }
 
 extension Coordinator {
