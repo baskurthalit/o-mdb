@@ -23,6 +23,10 @@ class SearchMovieVC: BaseViewController {
         addViewModelObservation()
         provider.setupTableView(tableView)
         viewModel.start()
+//        self.startLoading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+            self.stopLoading()
+        }
     }
     
     func inject(viewModel: SearchMovieVM, provider: SearchMovieProvider) {
