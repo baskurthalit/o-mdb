@@ -59,13 +59,7 @@ extension SearchMovieVC: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let searchText = textField.text,
-           !searchText.trimmingCharacters(in: .whitespaces).isEmpty,
-           textField == searchTextField {
-            self.searchText = searchText
-            searchMovie()
-            textField.resignFirstResponder()
-        }
+        textField.resignFirstResponder()
         return true
     }
     
