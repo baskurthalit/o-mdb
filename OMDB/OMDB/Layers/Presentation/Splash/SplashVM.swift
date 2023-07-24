@@ -13,7 +13,7 @@ protocol SplashVM {
     func start()
 }
 
-final class SplashVMImpl: SplashVM {
+final class SplashVMImpl:NSObject, SplashVM {
     
     var stateClosure: ((ObservationType<SplashEvent, ErrorType>) -> ())?
     
@@ -39,7 +39,10 @@ final class SplashVMImpl: SplashVM {
     
     private func checkNetworkStatus(isNetworkAvailable: Bool) {
         let isNetworkAvailable: Bool = useCase.isNetworkAvailable
-        guard isNetworkAvailable == true else { return }
+        guard isNetworkAvailable == true else {
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
+            return
+        }
         
         useCase.fetchSplashTitleFromRemoteConfig { [weak self] result in
             switch result {
@@ -49,9 +52,11 @@ final class SplashVMImpl: SplashVM {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.stateClosure?(.updateUI(.shouldContinueMainScreen))
-        }
+        self.perform(#selector(shouldCountinueMainScreen), with: nil, afterDelay: 3.0)
+    }
+    
+    @objc private func shouldCountinueMainScreen() {
+        self.stateClosure?(.updateUI(.shouldContinueMainScreen))
     }
     
     enum SplashEvent {
