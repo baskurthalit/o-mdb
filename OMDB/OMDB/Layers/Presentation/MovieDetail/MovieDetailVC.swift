@@ -10,11 +10,21 @@ import UIKit
 class MovieDetailVC: BaseViewController {
     
     private var viewModel: MovieDetailVM!
+    private var provider: MovieDetailProvider!
+    
+    func inject(viewModel: MovieDetailVM, provider: MovieDetailProvider) {
+        self.viewModel = viewModel
+        self.provider = provider
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addObservation()
+    }
+    
+    private func addObservation() {
+        addProviderObservation()
         addViewModelObservation()
-        
     }
     
     private func addViewModelObservation() {
@@ -33,10 +43,26 @@ class MovieDetailVC: BaseViewController {
         }
     }
     
+    private func addProviderObservation() {
+        provider.stateClosure = { [weak self] userInteraction in
+            switch userInteraction {
+            case .updateUI(let data):
+                self?.providerObservationHandler(data)
+            default : break
+            }
+        }
+    }
+    
+    private func providerObservationHandler(_ state: MovieDetailProviderImpl.UserInteractive?) {
+        switch state {
+        case .didTapMoviePoster(let movieItem):
+            break
+        default: break
+        }
+    }
+    
 
     
-    func inject(viewModel: MovieDetailVM) {
-        self.viewModel = viewModel
-    }
+    
 
 }

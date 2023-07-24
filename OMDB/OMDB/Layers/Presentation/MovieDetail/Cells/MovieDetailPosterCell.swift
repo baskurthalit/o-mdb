@@ -7,17 +7,15 @@
 
 import UIKit
 
-class MovieDetailPosterCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+final class MovieDetailPosterCell: UITableViewCell {
+    @IBOutlet weak var moviePosterImageView: UIImageView!
+    @IBOutlet weak var moviePosterContainer: UIView!{
+        didSet{
+            moviePosterContainer.layer.cornerRadius = 20
+        }
     }
     
+    func setupCell(imageUrl: String) {
+        self.moviePosterImageView.load(urlString: imageUrl)
+    }
 }
