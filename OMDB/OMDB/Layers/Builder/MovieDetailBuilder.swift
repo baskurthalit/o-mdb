@@ -18,8 +18,8 @@ struct MovieDetailBuilderImpl: MovieDetailBuilder {
         viewController.coordinator = coordinatorDelegate
         let movieDetailUseCase: MovieDetailUseCase = MovieDetailUseCaseImpl()
         let movieDetailViewModel: MovieDetailVM = MovieDetailVMImpl(useCase: movieDetailUseCase, movieItem: movieItem)
-
-        viewController.inject(viewModel: movieDetailViewModel)
+        let movieDetailProvider: MovieDetailProvider = MovieDetailProviderImpl()
+        viewController.inject(viewModel: movieDetailViewModel, provider: movieDetailProvider)
         return viewController
     }
 }
