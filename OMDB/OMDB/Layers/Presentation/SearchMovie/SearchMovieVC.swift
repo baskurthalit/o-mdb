@@ -39,6 +39,7 @@ class SearchMovieVC: BaseViewController {
             }
         }
     }
+    
     private func viewModelObservationHandler(_ state: SearchMovieVMImpl.Event?) {
         switch state {
         case .setProviderData(let data):
@@ -58,9 +59,12 @@ extension SearchMovieVC: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let searchText = textField.text, !searchText.trimmingCharacters(in: .whitespaces).isEmpty,
+        if let searchText = textField.text,
+           !searchText.trimmingCharacters(in: .whitespaces).isEmpty,
            textField == searchTextField {
-//            viewModel.searchMovie(for: searchText)
+            self.searchText = searchText
+            searchMovie()
+            textField.resignFirstResponder()
         }
         return true
     }
@@ -70,7 +74,7 @@ extension SearchMovieVC: UITextFieldDelegate {
             let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string)
             
             NSObject.cancelPreviousPerformRequests(withTarget: self)
-            if let searchText = newText, !searchText.isEmpty  {
+            if let searchText = newText, !searchText.trimmingCharacters(in: .whitespaces).isEmpty {
                 self.searchText = searchText
                 self.perform(#selector(searchMovie), with: nil, afterDelay: 1.0)
             } else {
