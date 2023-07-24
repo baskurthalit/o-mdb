@@ -9,6 +9,7 @@ import UIKit
 
 class MovieDetailVC: BaseViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     private var viewModel: MovieDetailVM!
     private var provider: MovieDetailProvider!
     
@@ -19,7 +20,10 @@ class MovieDetailVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBackButton()
         addObservation()
+        provider.setupTableView(tableView)
+        viewModel.start()
     }
     
     private func addObservation() {
@@ -38,7 +42,10 @@ class MovieDetailVC: BaseViewController {
     
     private func viewModelObservationHandler(_ state: MovieDetailVMImpl.Event?) {
         switch state {
-        case .updateUI: break
+        case .updateNavigationTitle(let title):
+            setNavigationTitle(title)
+        case .setProviderData(let contentData):
+            provider.setProviderData(contentData: contentData)
         default: break
         }
     }

@@ -52,4 +52,30 @@ class BaseViewController: UIViewController {
         self.loadingAnimation = nil
     }
     
+    func setNavigationBackButton() {
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        let backButton = UIBarButtonItem(
+            image: UIImage(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(didTapBackButtonOnNavigationController))
+
+        backButton.tintColor = .black
+        navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func didTapBackButtonOnNavigationController() {
+        if self.navigationController?.viewControllers.count == 1 {
+            self.dismiss(animated: true)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+}
+
+extension BaseViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }

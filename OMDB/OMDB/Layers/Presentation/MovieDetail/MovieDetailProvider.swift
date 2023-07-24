@@ -61,8 +61,14 @@ extension MovieDetailProviderImpl: UITableViewDataSource, UITableViewDelegate {
             let rowType = rows[indexPath.row]
             
             switch rowType {
-            case .imagePoster(let movieItem): return .init()
-            case .imageInformation(let movieItem): return .init()
+            case .imagePoster(let posterURL):
+                let moviePoster = tableView.dequeueReusableCell(with: MovieDetailPosterCell.self, for: indexPath)
+                moviePoster.setupCell(imageUrl: posterURL)
+                return moviePoster
+            case .imageInformation(let movieItem):
+                let movieDetailInfo = tableView.dequeueReusableCell(with: MovieDetailInfoCell.self, for: indexPath)
+                movieDetailInfo.setupCell(with: movieItem)
+                return movieDetailInfo
             }
             
         }
@@ -89,8 +95,8 @@ extension MovieDetailProviderImpl: UITableViewDataSource, UITableViewDelegate {
         case .Detail(let rows):
             let rowType = rows[indexPath.row]
             switch rowType {
-            case .imageInformation: return 500
-            case .imagePoster: return 500
+            case .imageInformation: return 100
+            case .imagePoster: return tableView.frame.width
             }
         }
     }
@@ -111,7 +117,7 @@ extension MovieDetailProviderImpl {
     }
     
     enum RowType {
-        case imagePoster(movieItem: MovieItem)
+        case imagePoster(posterUrl : String)
         case imageInformation(movieItem: MovieItem)
     }
 }

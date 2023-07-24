@@ -25,12 +25,23 @@ final class MovieDetailVMImpl: MovieDetailVM {
     }
     
     func start() {
-        //
+        stateClosure?(.updateUI(.updateNavigationTitle(with: movieItem.Title)))
+        prepareUI()
+    }
+    
+    private func prepareUI() {
+        var rows: [MovieDetailProviderImpl.RowType] = []
+        
+        rows.append(.imagePoster(posterUrl: movieItem.Poster))
+        rows.append(.imageInformation(movieItem: movieItem))
+        
+        stateClosure?(.updateUI(.setProviderData(contentData: [.Detail(rows: rows)])))
     }
     
     
     
     enum Event {
-        case updateUI
+        case updateNavigationTitle(with: String)
+        case setProviderData(contentData: [MovieDetailProviderImpl.SectionType])
     }
 }
