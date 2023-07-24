@@ -12,6 +12,8 @@
 		1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B334D352A69A413007D7BA8 /* SceneDelegate.swift */; };
 		1B334D3D2A69A413007D7BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B334D3C2A69A413007D7BA8 /* Assets.xcassets */; };
 		1B334D402A69A413007D7BA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B334D3E2A69A413007D7BA8 /* LaunchScreen.storyboard */; };
+		1B37084D2A6EE0D300B09A02 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1B37084C2A6EE0D300B09A02 /* Kingfisher */; };
+		1B37084F2A6EE12300B09A02 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37084E2A6EE12300B09A02 /* UIImageView+Ext.swift */; };
 		1B37AFF22A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37AFF12A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift */; };
 		1B37AFF62A6BF21700C0C3A0 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37AFF52A6BF21700C0C3A0 /* UIApplication+Ext.swift */; };
 		1B60ED522A6D8AC700E77479 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60ED512A6D8AC700E77479 /* UITableView+Ext.swift */; };
@@ -60,6 +62,7 @@
 		1B334D3C2A69A413007D7BA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B334D3F2A69A413007D7BA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B334D412A69A413007D7BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B37084E2A6EE12300B09A02 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		1B37AFF12A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsManager.swift; sourceTree = "<group>"; };
 		1B37AFF52A6BF21700C0C3A0 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		1B60ED512A6D8AC700E77479 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 			files = (
 				1B9E282A2A6BDED800BC652B /* FirebaseAnalyticsSwift in Frameworks */,
 				1B8DA8612A6BFDFF0068CC44 /* Reachability in Frameworks */,
+				1B37084D2A6EE0D300B09A02 /* Kingfisher in Frameworks */,
 				1B9E281F2A6BD4CF00BC652B /* Lottie in Frameworks */,
 				1B9E282E2A6BDED800BC652B /* FirebaseRemoteConfigSwift in Frameworks */,
 				1B9E28282A6BDED800BC652B /* FirebaseAnalytics in Frameworks */,
@@ -235,6 +239,7 @@
 				1BB183E12A69BB5A008F08C9 /* NSObject+Ext.swift */,
 				1B37AFF52A6BF21700C0C3A0 /* UIApplication+Ext.swift */,
 				1B60ED512A6D8AC700E77479 /* UITableView+Ext.swift */,
+				1B37084E2A6EE12300B09A02 /* UIImageView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				1B9E282B2A6BDED800BC652B /* FirebaseRemoteConfig */,
 				1B9E282D2A6BDED800BC652B /* FirebaseRemoteConfigSwift */,
 				1B8DA8602A6BFDFF0068CC44 /* Reachability */,
+				1B37084C2A6EE0D300B09A02 /* Kingfisher */,
 			);
 			productName = OMDB;
 			productReference = 1B334D302A69A413007D7BA8 /* OMDB.app */;
@@ -396,6 +402,7 @@
 				1B9E281D2A6BD4CF00BC652B /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				1B9E28262A6BDED800BC652B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				1B8DA85F2A6BFDFF0068CC44 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
+				1B37084B2A6EE0D300B09A02 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 1B334D312A69A413007D7BA8 /* Products */;
 			projectDirPath = "";
@@ -451,6 +458,7 @@
 				1B9E281C2A6BCFED00BC652B /* RouterFlow.swift in Sources */,
 				1BB183DC2A69ADEC008F08C9 /* BaseNavigationController.swift in Sources */,
 				1BB183F92A6B0806008F08C9 /* ReachabiltyManager.swift in Sources */,
+				1B37084F2A6EE12300B09A02 /* UIImageView+Ext.swift in Sources */,
 				1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */,
 				1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */,
 				1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */,
@@ -683,6 +691,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1B37084B2A6EE0D300B09A02 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		1B8DA85F2A6BFDFF0068CC44 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
@@ -710,6 +726,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B37084C2A6EE0D300B09A02 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B37084B2A6EE0D300B09A02 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		1B8DA8602A6BFDFF0068CC44 /* Reachability */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1B8DA85F2A6BFDFF0068CC44 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
