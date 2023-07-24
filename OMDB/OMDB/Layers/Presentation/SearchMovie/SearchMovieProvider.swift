@@ -75,6 +75,21 @@ extension SearchMovieProviderImpl: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sectionType = dataList[indexPath.section]
+        switch sectionType {
+        case .movie(let rows):
+            let rowType = rows[indexPath.row]
+            switch rowType {
+            case .movieRow(let movieItem):
+                stateClosure?(.updateUI(.didTapMovie(movieItem: movieItem)))
+            }
+            
+        case .empty: break
+        
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let sectionType = dataList[indexPath.section]
         switch sectionType {
@@ -87,7 +102,7 @@ extension SearchMovieProviderImpl: UITableViewDataSource, UITableViewDelegate {
 //MARK: UserInteractive
 extension SearchMovieProviderImpl {
     enum UserInteractive {
-        case didTapMovie
+        case didTapMovie(movieItem: MovieItem)
     }
     
 }

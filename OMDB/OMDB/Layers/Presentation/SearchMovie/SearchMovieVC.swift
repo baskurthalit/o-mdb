@@ -21,9 +21,14 @@ class SearchMovieVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationTitle("Search Movie")
-        addViewModelObservation()
+        addObservation()
         provider.setupTableView(tableView)
         viewModel.start()
+    }
+    
+    private func addObservation() {
+        addViewModelObservation()
+        addProviderObservation()
     }
     
     func inject(viewModel: SearchMovieVM, provider: SearchMovieProvider) {
@@ -49,6 +54,25 @@ class SearchMovieVC: BaseViewController {
         default: break
         }
     }
+    
+    private func addProviderObservation() {
+        provider.stateClosure = { [weak self] userInteraction in
+            switch userInteraction {
+            case .updateUI(let data):
+                self?.providerObservationHandler(data)
+            default : break
+            }
+        }
+    }
+    
+    private func providerObservationHandler(_ state: SearchMovieProviderImpl.UserInteractive?) {
+        switch state {
+        case .didTapMovie(let movieItem):
+            coordinator?.navigate(to: .movie(.movieDetail(withMovieItem: movieItem)))
+        default: break
+        }
+    }
+
 
 }
 

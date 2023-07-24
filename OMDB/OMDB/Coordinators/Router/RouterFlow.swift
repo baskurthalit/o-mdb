@@ -13,5 +13,5 @@ enum AppFlow {
 
 enum MovieFlow {
     case searchMovie
-    case movieDetail
+    case movieDetail(withMovieItem: MovieItem)
 }
