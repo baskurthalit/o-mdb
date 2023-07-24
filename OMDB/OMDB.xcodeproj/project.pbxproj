@@ -14,6 +14,11 @@
 		1B334D402A69A413007D7BA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B334D3E2A69A413007D7BA8 /* LaunchScreen.storyboard */; };
 		1B37084D2A6EE0D300B09A02 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1B37084C2A6EE0D300B09A02 /* Kingfisher */; };
 		1B37084F2A6EE12300B09A02 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37084E2A6EE12300B09A02 /* UIImageView+Ext.swift */; };
+		1B3708522A6EEAB200B09A02 /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3708502A6EEAB200B09A02 /* MovieDetailVC.swift */; };
+		1B3708532A6EEAB200B09A02 /* MovieDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B3708512A6EEAB200B09A02 /* MovieDetailVC.xib */; };
+		1B3708552A6EEAC700B09A02 /* MovieDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3708542A6EEAC700B09A02 /* MovieDetailUseCase.swift */; };
+		1B3708572A6EEACE00B09A02 /* MovieDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3708562A6EEACE00B09A02 /* MovieDetailBuilder.swift */; };
+		1B3708592A6EEB0B00B09A02 /* MovieDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3708582A6EEB0B00B09A02 /* MovieDetailVM.swift */; };
 		1B37AFF22A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37AFF12A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift */; };
 		1B37AFF62A6BF21700C0C3A0 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B37AFF52A6BF21700C0C3A0 /* UIApplication+Ext.swift */; };
 		1B60ED522A6D8AC700E77479 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60ED512A6D8AC700E77479 /* UITableView+Ext.swift */; };
@@ -63,6 +68,11 @@
 		1B334D3F2A69A413007D7BA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B334D412A69A413007D7BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B37084E2A6EE12300B09A02 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		1B3708502A6EEAB200B09A02 /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
+		1B3708512A6EEAB200B09A02 /* MovieDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailVC.xib; sourceTree = "<group>"; };
+		1B3708542A6EEAC700B09A02 /* MovieDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailUseCase.swift; sourceTree = "<group>"; };
+		1B3708562A6EEACE00B09A02 /* MovieDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailBuilder.swift; sourceTree = "<group>"; };
+		1B3708582A6EEB0B00B09A02 /* MovieDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVM.swift; sourceTree = "<group>"; };
 		1B37AFF12A6BEB3300C0C3A0 /* FirebaseAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsManager.swift; sourceTree = "<group>"; };
 		1B37AFF52A6BF21700C0C3A0 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		1B60ED512A6D8AC700E77479 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
@@ -186,6 +196,7 @@
 			children = (
 				1BB183ED2A69C70C008F08C9 /* SplashBuilder.swift */,
 				1B9E28162A6BCC9E00BC652B /* SearchMovieBuilder.swift */,
+				1B3708562A6EEACE00B09A02 /* MovieDetailBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -229,6 +240,7 @@
 			children = (
 				1B7383D32A6B238B00EEBC5F /* SplashUseCase.swift */,
 				1B9E28142A6BCC4400BC652B /* SearchMovieUseCase.swift */,
+				1B3708542A6EEAC700B09A02 /* MovieDetailUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -341,6 +353,9 @@
 		1BB183F12A69CA79008F08C9 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
+				1B3708502A6EEAB200B09A02 /* MovieDetailVC.swift */,
+				1B3708512A6EEAB200B09A02 /* MovieDetailVC.xib */,
+				1B3708582A6EEB0B00B09A02 /* MovieDetailVM.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -420,6 +435,7 @@
 			files = (
 				1B334D402A69A413007D7BA8 /* LaunchScreen.storyboard in Resources */,
 				1B60ED582A6D8B1600E77479 /* MovieCell.xib in Resources */,
+				1B3708532A6EEAB200B09A02 /* MovieDetailVC.xib in Resources */,
 				1B9E28232A6BD61600BC652B /* splash-movie-animation.json in Resources */,
 				1BB183EC2A69C5E4008F08C9 /* SearchMovieVC.xib in Resources */,
 				1B9E28252A6BDE2B00BC652B /* GoogleService-Info.plist in Resources */,
@@ -441,6 +457,8 @@
 				1B60ED572A6D8B1600E77479 /* MovieCell.swift in Sources */,
 				1B37AFF62A6BF21700C0C3A0 /* UIApplication+Ext.swift in Sources */,
 				1B9E28152A6BCC4400BC652B /* SearchMovieUseCase.swift in Sources */,
+				1B3708552A6EEAC700B09A02 /* MovieDetailUseCase.swift in Sources */,
+				1B3708592A6EEB0B00B09A02 /* MovieDetailVM.swift in Sources */,
 				1BB183DE2A69AF02008F08C9 /* AppCoordinator.swift in Sources */,
 				1BB183E72A69BD67008F08C9 /* SplashVC.swift in Sources */,
 				1B9E28112A6BC57E00BC652B /* SearchMovie.swift in Sources */,
@@ -448,6 +466,7 @@
 				1BB183EB2A69C5E4008F08C9 /* SearchMovieVC.swift in Sources */,
 				1B60ED522A6D8AC700E77479 /* UITableView+Ext.swift in Sources */,
 				1BB183E22A69BB5A008F08C9 /* NSObject+Ext.swift in Sources */,
+				1B3708572A6EEACE00B09A02 /* MovieDetailBuilder.swift in Sources */,
 				1BB183D92A69ACA5008F08C9 /* Coordinator.swift in Sources */,
 				1B9E28172A6BCC9E00BC652B /* SearchMovieBuilder.swift in Sources */,
 				1B9E28132A6BCBCF00BC652B /* SearchMovieVM.swift in Sources */,
@@ -460,6 +479,7 @@
 				1BB183F92A6B0806008F08C9 /* ReachabiltyManager.swift in Sources */,
 				1B37084F2A6EE12300B09A02 /* UIImageView+Ext.swift in Sources */,
 				1B7383D62A6B267A00EEBC5F /* VMHelper.swift in Sources */,
+				1B3708522A6EEAB200B09A02 /* MovieDetailVC.swift in Sources */,
 				1B334D362A69A413007D7BA8 /* SceneDelegate.swift in Sources */,
 				1B7383D22A6B1FC800EEBC5F /* SplashVM.swift in Sources */,
 				1B9E28192A6BCD2900BC652B /* SearchMovieProvider.swift in Sources */,

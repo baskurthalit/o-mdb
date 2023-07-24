@@ -45,7 +45,10 @@ extension MovieCoordinator {
             let builder: SearchMovieBuilder = SearchMovieBuilderImpl()
             let vc = builder.build(coordinatorDelegate: self)
             self.navigationController.pushViewController(vc, animated: true)
-        case .movieDetail: break
+        case .movieDetail(let moviewItem):
+            let builder: MovieDetailBuilder = MovieDetailBuilderImpl()
+            let vc = builder.build(coordinatorDelegate: self, movieItem: moviewItem)
+            self.navigationController.pushViewController(vc, animated: true)
         }
     }
 }
