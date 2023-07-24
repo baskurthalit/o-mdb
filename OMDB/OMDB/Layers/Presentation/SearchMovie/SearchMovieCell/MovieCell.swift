@@ -12,6 +12,7 @@ final class MovieCell: UITableViewCell {
     
     @IBOutlet weak var movieImdbScore: UILabel!
     @IBOutlet weak var movieYear: UILabel!
+    @IBOutlet weak var movieImageView: UIImageView!
     
     func setupCell(with movieItem: MovieItem) {
         self.movieYear.text = movieItem.Year
@@ -21,6 +22,6 @@ final class MovieCell: UITableViewCell {
     }
     
     private func setupMoviePoster(posterURLString: String) {
-        
+        movieImageView.load(urlString: posterURLString)
     }
 }

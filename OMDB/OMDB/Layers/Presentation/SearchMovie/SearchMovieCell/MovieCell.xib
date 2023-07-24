@@ -57,7 +57,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rJ-ke-crj" userLabel="MoviePoster">
                         <rect key="frame" x="20" y="5" width="100" height="100"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog.png" translatesAutoresizingMaskIntoConstraints="NO" id="dts-r3-lCd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dts-r3-lCd">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                             </imageView>
                         </subviews>
@@ -84,6 +84,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="movieImageView" destination="dts-r3-lCd" id="O1f-dU-Y6Y"/>
                 <outlet property="movieImdbScore" destination="7jC-7E-ADb" id="hNx-Fc-o0k"/>
                 <outlet property="movieTitle" destination="q6b-Lo-1j3" id="m13-on-nGz"/>
                 <outlet property="movieYear" destination="7N7-Fq-fe4" id="pXc-Kb-ZVi"/>
@@ -92,7 +93,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dog.png" width="447" height="479"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
