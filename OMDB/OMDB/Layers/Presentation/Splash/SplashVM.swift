@@ -13,7 +13,7 @@ protocol SplashVM {
     func start()
 }
 
-final class SplashVMImpl:NSObject, SplashVM {
+final class SplashVMImpl : SplashVM {
     
     var stateClosure: ((ObservationType<SplashEvent, ErrorType>) -> ())?
     
@@ -37,12 +37,8 @@ final class SplashVMImpl:NSObject, SplashVM {
                                                name: Notification.Name("internetConnectionChanged"), object: nil)
     }
     
-    private func checkNetworkStatus(isNetworkAvailable: Bool) {
-        let isNetworkAvailable: Bool = useCase.isNetworkAvailable
-        guard isNetworkAvailable == true else {
-            NSObject.cancelPreviousPerformRequests(withTarget: self)
-            return
-        }
+    private func fetchRemoteConfigDependingNetworkStatus(isNetworkAvailable: Bool) {
+        guard isNetworkAvailable == true else { return }
         
         useCase.fetchSplashTitleFromRemoteConfig { [weak self] result in
             switch result {
@@ -51,23 +47,16 @@ final class SplashVMImpl:NSObject, SplashVM {
             case .failure(let error): break
             }
         }
-        
-        self.perform(#selector(shouldCountinueMainScreen), with: nil, afterDelay: 3.0)
-    }
-    
-    @objc private func shouldCountinueMainScreen() {
-        self.stateClosure?(.updateUI(.shouldContinueMainScreen))
     }
     
     enum SplashEvent {
         case updateSplashTitle(title: String?)
-        case shouldContinueMainScreen
     }
     
     @objc func reachabilityStatus(_ notification: NSNotification) {
         if let object = notification.object as? [String : Any],
            let isNetworkAvailable : Bool = object["isNetworkAvailable"] as? Bool {
-            checkNetworkStatus(isNetworkAvailable: isNetworkAvailable)
+            fetchRemoteConfigDependingNetworkStatus(isNetworkAvailable: isNetworkAvailable)
         }
     }
 

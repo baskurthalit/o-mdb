@@ -18,7 +18,7 @@ class AppCoordinator: Coordinator {
     
     func start(completion: @escaping () -> Void = { }) {
         let builder: SplashScreenBuilder = SplashScreenBuilderImpl()
-        let vc = builder.build(coordinatorDelegate: self)
+        let vc = builder.build()
         self.navigationController.pushViewController(vc, animated: false)
     }
     
@@ -30,13 +30,10 @@ class AppCoordinator: Coordinator {
     }
 }
 
-extension AppCoordinator: CoordinatorDelegate {
-    func navigate(to flowType: AppFlow) {
-        switch flowType{
-        case .movie:
-            let movieCoordinator = MovieCoordinator(parentCoordinator: self)
-            self.addChild(coordinator: movieCoordinator)
-            movieCoordinator.start() { self.navigationController.viewControllers.removeAll() }
-        }
+extension AppCoordinator {
+    func openMovieFlow() {
+        let movieCoordinator = MovieCoordinator(parentCoordinator: self)
+        self.addChild(coordinator: movieCoordinator)
+        movieCoordinator.start() { self.navigationController.viewControllers.removeAll() }
     }
 }

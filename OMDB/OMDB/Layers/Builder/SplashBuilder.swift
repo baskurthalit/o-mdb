@@ -9,13 +9,12 @@ import UIKit
 
 
 protocol SplashScreenBuilder {
-    func build(coordinatorDelegate: CoordinatorDelegate?) -> UIViewController
+    func build() -> UIViewController
 }
 
 struct SplashScreenBuilderImpl: SplashScreenBuilder {
-    func build(coordinatorDelegate: CoordinatorDelegate?) -> UIViewController {
+    func build() -> UIViewController {
         let viewController = SplashVC(nibName: SplashVC.className, bundle: nil)
-        viewController.coordinator = coordinatorDelegate
         let splashUseCase: SplashUseCase = SplashUseCaseImpl()
         let splashViewModel: SplashVM = SplashVMImpl(useCase: splashUseCase)
         viewController.inject(viewModel: splashViewModel)

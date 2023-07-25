@@ -41,8 +41,6 @@ class SplashVC: BaseViewController {
     }
     private func viewModelObservationHandler(_ state: SplashVMImpl.Event?) {
         switch state {
-        case .shouldContinueMainScreen:
-            coordinator?.navigate(to: .movie(.searchMovie))
         case .updateSplashTitle(let title): self.splashTitle.text = title
         default: break
         }
