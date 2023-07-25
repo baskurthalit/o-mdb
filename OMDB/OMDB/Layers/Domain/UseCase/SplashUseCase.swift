@@ -9,21 +9,15 @@ import Foundation
 import Firebase
 
 protocol SplashUseCase {
-    var  isNetworkAvailable: Bool { get }
     func fetchSplashTitleFromRemoteConfig(completion: @escaping SplashUseCaseImpl.FetchRemoteConfigCompleteType)
 }
 
 final class SplashUseCaseImpl: SplashUseCase {
     typealias FetchRemoteConfigCompleteType = (Result<String?,Error>) -> Void
     
-    let reachabiltyManager: ReachabilityManager
     private var remoteConfig = RemoteConfig.remoteConfig()
     
-    var isNetworkAvailable: Bool { reachabiltyManager.isNetworkAvailable }
-    
-    init(reachabiltyManager: ReachabilityManager = .shared) {
-        self.reachabiltyManager = reachabiltyManager
-    }
+    init() { }
     
     deinit { print("DEINIT \(self)") }
 }
