@@ -27,6 +27,18 @@ final class MovieDetailVMImpl: MovieDetailVM {
     func start() {
         stateClosure?(.updateUI(.updateNavigationTitle(with: movieItem.Title)))
         prepareUI()
+        sendMovieDetailViewEvent()
+    }
+    
+    func sendMovieDetailViewEvent() {
+        FirebaseAnalyticsManager
+            .shared
+            .sendEvent("page_view",
+                       parameters:
+                        [ "movie_type": movieItem.type,
+                          "image_url" : movieItem.Poster ?? "not-have",
+                          "imdb_id" : movieItem.imdbID,
+                          "movie_title" : movieItem.Title ])
     }
     
     private func prepareUI() {
