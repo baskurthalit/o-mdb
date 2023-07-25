@@ -15,7 +15,8 @@ final class MovieDetailPosterCell: UITableViewCell {
         }
     }
     
-    func setupCell(imageUrl: String) {
-        self.moviePosterImageView.load(urlString: imageUrl)
+    func setupCell(imageUrl: String?) {
+        self.moviePosterImageView.load(urlString: imageUrl ?? "",
+                                       placeHolder: UIImage(named: "launch-image"))
     }
 }

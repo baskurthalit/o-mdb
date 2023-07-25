@@ -117,7 +117,7 @@ extension MovieDetailProviderImpl {
     }
     
     enum RowType {
-        case imagePoster(posterUrl : String)
+        case imagePoster(posterUrl : String?)
         case imageInformation(movieItem: MovieItem)
     }
 }

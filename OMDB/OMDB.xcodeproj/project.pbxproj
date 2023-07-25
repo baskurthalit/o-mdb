@@ -218,9 +218,9 @@
 		1B334D4E2A69A6EF007D7BA8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1BB183EF2A69CA6E008F08C9 /* Splash */,
 				1BB183F02A69CA74008F08C9 /* SearchMovie */,
 				1BB183F12A69CA79008F08C9 /* MovieDetail */,
-				1BB183EF2A69CA6E008F08C9 /* Splash */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";

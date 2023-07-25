@@ -21,7 +21,7 @@ final class MovieCell: UITableViewCell {
         setupMoviePoster(posterURLString: movieItem.Poster)
     }
     
-    private func setupMoviePoster(posterURLString: String) {
-        movieImageView.load(urlString: posterURLString)
+    private func setupMoviePoster(posterURLString: String?) {
+        movieImageView.load(urlString: posterURLString ?? "", placeHolder: UIImage(named: "launch-image"))
     }
 }
